@@ -1,0 +1,26 @@
+<section id="about" class="about">
+  <div class="container">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>
+          Hi! I'm a passionate web developer with expertise in building modern, responsive web applications. 
+          I love creating beautiful and functional user interfaces that solve real-world problems.
+        </p>
+        <p>
+          With a strong foundation in frontend technologies and a keen eye for design, I strive to deliver 
+          exceptional digital experiences. I'm committed to continuous learning and staying updated with the 
+          latest web technologies.
+        </p>
+      </div>
+      <div class="skills-section">
+        <h3>Skills</h3>
+        <div class="skills-grid">
+          <div class="skill-tag" *ngFor="let skill of skills">
+            {{ skill }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,24 @@
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <h1 (click)="navigateTo('landing')">Dipankar</h1>
+      </div>
+      
+      <button class="menu-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav [class.active]="isMenuOpen" class="nav">
+        <ul>
+          <li><a (click)="navigateTo('landing')" href="#landing" [class.active]="isActive('landing')">Home</a></li>
+          <li><a (click)="navigateTo('about')" href="#about" [class.active]="isActive('about')">About</a></li>
+          <li><a (click)="navigateTo('projects')" href="#projects" [class.active]="isActive('projects')">Projects</a></li>
+          <li><a (click)="navigateTo('contact')" href="#contact" [class.active]="isActive('contact')">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
