@@ -1,24 +1,57 @@
 <section id="about" class="about">
   <div class="container">
     <h2>About Me</h2>
-    <div class="about-content">
+
+    <!-- About and Skills Row -->
+    <div class="about-skills-row">
       <div class="about-text">
         <p>
-          Hi! I'm a passionate web developer with expertise in building modern, responsive web applications. 
-          I love creating beautiful and functional user interfaces that solve real-world problems.
+          Angular developer with ~4 years of experience building scalable web applications.
         </p>
         <p>
-          With a strong foundation in frontend technologies and a keen eye for design, I strive to deliver 
-          exceptional digital experiences. I'm committed to continuous learning and staying updated with the 
-          latest web technologies.
+          I focus on clean architecture, reusable components, and performance optimization using Angular, TypeScript, and RxJS.
+        </p>
+        <p>
+          My work involves improving application efficiency, optimizing load times, and building maintainable systems that support faster development and better user experience.
         </p>
       </div>
+
       <div class="skills-section">
-        <h3>Skills</h3>
-        <div class="skills-grid">
-          <div class="skill-tag" *ngFor="let skill of skills">
-            {{ skill }}
+        <h3>Skills & Certifications</h3>
+        <div class="skills-certifications-stack">
+          <div class="skills-container">
+            <div class="skills-grid">
+              <div class="skill-tag" *ngFor="let skill of skills">
+                {{ skill }}
+              </div>
+            </div>
           </div>
+
+          <div class="certifications-container">
+            <div class="certifications-list">
+              <div class="certification-item" *ngFor="let cert of certifications">
+                <span class="cert-icon">🏆</span>
+                {{ cert }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Work Experience Section -->
+    <div class="experience-section">
+      <h3>Work Experience</h3>
+      <div class="experience-timeline">
+        <div class="experience-item" *ngFor="let exp of workExperience">
+          <div class="experience-header">
+            <h4>{{ exp.title }}</h4>
+            <span class="company">{{ exp.company }}</span>
+            <span class="duration">{{ exp.duration }}</span>
+          </div>
+          <ul class="responsibilities">
+            <li *ngFor="let resp of exp.responsibilities">{{ resp }}</li>
+          </ul>
         </div>
       </div>
     </div>
